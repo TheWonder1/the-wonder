@@ -1,12 +1,24 @@
-# The Wonder — Smart IT & Automation Studio
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonder-wordmark-color.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonder-icon-color.svg">
+    <img src="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonder-icon-color.svg" alt="The Wonder logo" height="72">
+  </picture>
+</p>
 
-> **One-page micro-agency website** — a premium marketing landing page built with a workflow-map browsing experience. Every section is a node on a live flow diagram that draws itself as you scroll.
+<h1 align="center">The Wonder — Smart IT &amp; Automation Studio</h1>
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-black?logo=framer)
-![License](https://img.shields.io/badge/license-MIT-green)
+<p align="center">
+  <strong>One-page micro-agency website</strong> — a premium marketing landing page built with a workflow-map browsing experience. Every section is a node on a live flow diagram that draws itself as you scroll.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-14-black?logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind-3.4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Framer_Motion-11-black?logo=framer" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+</p>
 
 ---
 
@@ -76,6 +88,53 @@ All visual tokens come from **The Wonder DS v1.0** — colours, typography, shad
 .card-base          /* surface + border + hover lift */
 .btn-shimmer        /* shimmer sweep on hover */
 ```
+
+---
+
+## Sub-brands
+
+The Wonder studio uses a family of sub-brand identities — each sharing the same core icon mark but with a distinct colour that signals its domain. All assets live in [TheWonder1/the-wonder-ds](https://github.com/TheWonder1/the-wonder-ds/tree/main/assets/logos).
+
+<table>
+  <thead>
+    <tr>
+      <th>Mark</th>
+      <th>Sub-brand</th>
+      <th>Colour</th>
+      <th>Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonderflow-icon.svg" height="36" alt="WonderFlow"></td>
+      <td><strong>WonderFlow</strong></td>
+      <td><code>#22D3EE</code> Cyan</td>
+      <td>Workflow automation — Power Automate, Make, Zapier pipelines</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonderops-icon.svg" height="36" alt="WonderOps"></td>
+      <td><strong>WonderOps</strong></td>
+      <td><code>#A78BFA</code> Lavender</td>
+      <td>IT operations — Microsoft 365, Azure AD, ServiceNow, endpoint management</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/TheWonder1/the-wonder-ds/main/assets/logos/wonderstack-icon.svg" height="36" alt="WonderStack"></td>
+      <td><strong>WonderStack</strong></td>
+      <td><code>#FFDD44</code> Amber</td>
+      <td>Tech stack builds — SharePoint intranets, Power Apps, custom integrations</td>
+    </tr>
+  </tbody>
+</table>
+
+### Logo assets
+
+| File | Use |
+|---|---|
+| `wonder-wordmark-color.svg` | Full wordmark — dark backgrounds, presentations, social |
+| `wonder-icon-color.svg` | Gradient mark — site navbar, light & dark compatible |
+| `wonder-icon-white.svg` | All-white mark — coloured or photo backgrounds |
+| `wonder-icon-square-color.svg` | Compact square mark — app icons, badges |
+| `favicon.svg` | Browser tab / PWA favicon (32 × 32, rounded rect) |
 
 ---
 

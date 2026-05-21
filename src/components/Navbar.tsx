@@ -69,12 +69,15 @@ export default function Navbar({ onCapabilityDeck }: NavbarProps) {
           <a
             href="#hero"
             onClick={(e) => { e.preventDefault(); scrollTo('#hero') }}
-            className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-w-primary rounded-md"
+            className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-w-primary rounded-md"
             aria-label="The Wonder — home"
           >
-            <span className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
-              <span className="text-xs font-bold text-[#0B1220] font-display">W</span>
-            </span>
+            <img
+              src="/logos/wonder-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-7 w-auto flex-shrink-0"
+            />
             <span className="font-display font-semibold text-w-text text-base tracking-tight">
               The Wonder
             </span>

@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   description:
     'We design reliable IT systems and automated workflows that help teams move faster with less manual work. Enterprise-grade automation, Microsoft 365, ServiceNow, and AI enablement.',
   keywords: ['IT automation', 'workflow automation', 'Microsoft 365', 'SharePoint', 'ServiceNow', 'Power Automate'],
+  icons: {
+    icon: '/logos/favicon.svg',
+    shortcut: '/logos/favicon.svg',
+  },
   openGraph: {
     title: 'The Wonder — Smart IT & Automation Studio',
     description: 'Modern IT + Automation that removes friction.',
