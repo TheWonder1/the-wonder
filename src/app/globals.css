@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   The Wonder DS v1.0 — Color Tokens as CSS Custom Properties
+   Source: tokens/colors.json
+
+   Two variable formats per brand color:
+     --w-primary        hex, for direct CSS use (gradients, etc.)
+     --w-primary-rgb    space-separated channels, for Tailwind opacity modifiers
+   ============================================================ */
+
+:root {
+  /* Light mode */
+  --w-bg:           #F7F8FB;
+  --w-surface:      #FFFFFF;
+  --w-surface-2:    #EEF1F7;
+  --w-accent:       #F2B900;
+  --w-text:         #111827;
+  --w-muted:        #475569;
+  --w-border:       rgba(11,18,32,.10);
+  --w-border-focus: rgba(124,92,240,.40);
+  /* Brand — hex */
+  --w-primary:   #7C5CF0;
+  --w-secondary: #0891B2;
+  /* Brand — RGB channels (for Tailwind /opacity modifier support) */
+  --w-primary-rgb:   124 92 240;
+  --w-secondary-rgb: 8 145 178;
+}
+
+.dark {
+  /* Dark mode — mature deep navy, not pure black */
+  --w-bg:           #0B1220;
+  --w-surface:      #111A2E;
+  --w-surface-2:    #1B2541;
+  --w-accent:       #FFDD44;
+  --w-text:         #E5E7EB;
+  --w-muted:        #94A3B8;
+  --w-border:       rgba(255,255,255,.12);
+  --w-border-focus: rgba(167,139,250,.40);
+  /* Brand — hex */
+  --w-primary:   #A78BFA;
+  --w-secondary: #22D3EE;
+  /* Brand — RGB channels */
+  --w-primary-rgb:   167 139 250;
+  --w-secondary-rgb: 34 211 238;
+}
+
+/* =================== Base =================== */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--w-bg);
+  color: var(--w-text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =================== Scrollbar =================== */
+::-webkit-scrollbar          { width: 4px; }
+::-webkit-scrollbar-track    { background: var(--w-bg); }
+::-webkit-scrollbar-thumb    { background: var(--w-primary); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--w-secondary); }
+
+/* =================== Focus ring =================== */
+:focus-visible {
+  outline: 2px solid var(--w-primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* =================== Selection =================== */
+::selection {
+  background: rgba(167,139,250,.25);
+  color: var(--w-text);
+}
+
+/* =================== Utility layers =================== */
+@layer utilities {
+  /* Brand gradient — always wonder lavender→cyan regardless of theme */
+  .gradient-primary {
+    background: linear-gradient(90deg, #A78BFA 0%, #22D3EE 100%);
+  }
+
+  /* Gradient text clip */
+  .gradient-text {
+    background: linear-gradient(90deg, #A78BFA 0%, #22D3EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Aurora hero background */
+  .gradient-aurora {
+    background:
+      radial-gradient(60% 60% at 30% 30%, rgba(167,139,250,.30) 0%, transparent 60%),
+      radial-gradient(60% 60% at 80% 40%, rgba(34,211,238,.25) 0%, transparent 60%),
+      radial-gradient(50% 50% at 60% 90%, rgba(255,221,68,.10) 0%, transparent 65%);
+  }
+
+  /* Glassmorphism — dark variant (navbar, mobile menu) */
+  .glass-dark {
+    background: rgba(11,18,32,.80);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  /* Glassmorphism — light variant */
+  .glass-light {
+    background: rgba(247,248,251,.85);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border-bottom: 1px solid rgba(11,18,32,.08);
+  }
+
+  /* Card surface with hover lift */
+  .card-base {
+    background: var(--w-surface);
+    border: 1px solid var(--w-border);
+    border-radius: 1rem;
+    transition:
+      box-shadow   0.24s cubic-bezier(.2,.7,.2,1),
+      transform    0.24s cubic-bezier(.2,.7,.2,1),
+      border-color 0.24s ease;
+  }
+  .card-base:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,.40), 0 0 0 1px rgba(167,139,250,.35);
+    transform: translateY(-4px);
+    border-color: rgba(167,139,250,.28);
+  }
+
+  /* Shimmer button — background sweep on hover */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; right: 0; bottom: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      rgba(255,255,255,.18) 50%,
+      transparent 75%
+    );
+    transition: left 0.5s ease;
+    pointer-events: none;
+  }
+  .btn-shimmer:hover::after {
+    left: 100%;
+  }
+}
