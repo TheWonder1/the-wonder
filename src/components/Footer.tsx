@@ -11,10 +11,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-xs font-bold text-[#0B1220] font-display">W</span>
-              </span>
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/logos/wonder-icon-color.svg"
+                alt=""
+                aria-hidden="true"
+                className="h-7 w-auto flex-shrink-0"
+              />
               <span className="font-display font-semibold text-w-text text-base">The Wonder</span>
             </div>
             <p className="text-sm text-w-muted font-body leading-relaxed max-w-xs">
